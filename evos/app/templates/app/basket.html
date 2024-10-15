@@ -1,0 +1,29 @@
+{% extends 'app/main.html' %}
+{% load static %}
+{% block title %}Basket{% endblock title %}
+{% block content %}
+
+    <h1>Basket</h1>
+    {% if not baskets %}
+        <p>Your basket is empty</p>
+    {% endif %}
+    <div class="basket">
+
+    {% for basket in baskets %}
+            <div class="dish_info">
+                <p>Name: {{ basket.dish }}</p>
+                <img class="img" src="{{ basket.dish.photo.url }}">
+                <p>Cost: {{ basket.dish.cost }}</p>
+                <p>Quantity: {{ basket.quantity }}</p>
+                <div class="as">
+                    <a class="a" href="{% url 'delete_one_dish_to_basket' pk=basket.id %}" >Delete one</a>
+                    <a class="a" href="{% url 'delete_basket' pk=basket.id%}" methods="POST">Delete</a>
+                    <a class="a" href="{% url 'add_dish_in_basket' pk=basket.id %}">Add one</a>
+
+                </div>
+            </div>
+    {% endfor %}
+        </div>
+
+
+{% endblock content %}

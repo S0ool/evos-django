@@ -1,0 +1,187 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: yellowgreen;
+    overflow-y: auto;
+
+}
+
+header {
+    background-color: #ffc446;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #fcb900;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left_category {
+    width: 20%;
+    padding: 20px;
+    background:#fcb900;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.categories a {
+    display: block;
+    color: #222222;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categories a:hover {
+    background-color: #fcb900;
+    color: white;
+}
+
+.basket {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 18px;
+    color: black;
+    height: 100vh;
+    background: #fcb900;
+    text-align: center;
+    padding: 10px;
+   border-radius: 8px;
+    overflow-y: auto;
+}
+
+
+.basket a {
+    color: black;
+    text-decoration: none;
+}
+
+.basket a:hover {
+    color: white;
+}
+
+.right_category {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+    background-color: #fcb900;
+    overflow-y: auto;
+}
+
+.dish {
+    background-color: #fcb900;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.dish:hover {
+    transform: translateY(-10px);
+}
+
+.dish_info {
+    padding: 20px;
+}
+
+.dish_info p {
+    margin: 10px 0;
+}
+
+.dish_info img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.add_dish_to_basket {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #fcb900;
+    color: white;
+    font-size: 18px;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.add_dish_to_basket:hover {
+    background-color: #222222;
+}
+
+.add_window {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 370px;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_window p {
+    color: white;
+    font-size: 20px;
+}
+.a{
+    color: white !important;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.a:hover{
+    color: #158802 !important;
+}
+.as{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.img{
+    width: 300px !important;
+}
+h1{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    background:  #158802;
+    margin: 0;
+    padding: 20px;
+
+}

@@ -1,0 +1,11 @@
+{% extends 'app/main.html' %}
+{% block title %}{{ category }}{% endblock title %}
+{% block style %}
+
+{% endblock style %}
+{% block content %}
+<div>
+    <h1>{{ category }}</h1>
+    <p>{{ category.description }}</p>
+</div>
+{% endblock content %}

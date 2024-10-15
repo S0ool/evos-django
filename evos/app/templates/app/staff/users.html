@@ -1,0 +1,17 @@
+
+{% extends 'app/staff/staff.html' %}
+{% block staff_content %}
+    {% for client in clients %}
+        <p>{{ client.username }}</p>
+        <ol>
+            {% for user_orders in users_orders %}
+                {% for order in user_orders %}
+                    {% if order.client == client %}
+                        <li>Dish: {{ order.dish }}/ Quantity: {{ order.quantity }}</li>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </ol>
+
+    {% endfor %}
+{% endblock staff_content %}

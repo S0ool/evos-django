@@ -1,0 +1,25 @@
+{% extends 'app/staff/staff.html' %}
+{% block staff_content %}
+
+
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>Create</button>
+</form>
+
+<div class="container">
+    <div class="dish">
+    {% for dish in dishes %}
+    
+        <p>Name: {{ dish }}</p>
+        <img src="{{ dish.photo.url }}">
+        <p>Cost: {{ dish.cost }}</p>
+        <p>Category: {{ dish.category }}</p>
+        <a href="{% url 'edit_dish' pk=dish.id %}">Edit</a>
+        <a href="{% url 'delete_dish' pk=dish.id %}">Delete </a>
+    {% endfor %}
+    </div>
+</div>
+{% endblock staff_content %}

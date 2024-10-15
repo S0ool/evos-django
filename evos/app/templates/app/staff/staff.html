@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block staff_title %}Staff title{% endblock staff_title %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+</head>
+<body>
+    <header>
+        {% block staff_header %}
+            <a href="{% url 'categories' %}">Category</a>
+            <a href="{% url 'dishes' %}">Dishes</a>
+            <a href="{% url 'users' %}">Users</a>
+            <a href="{% url 'logout_page' %}">Logout</a>
+        {% endblock staff_header %}
+    </header>
+    <div>
+        {% block staff_content %}
+        {% endblock staff_content %}
+    </div>
+</body>
+</html>

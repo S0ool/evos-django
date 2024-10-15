@@ -1,0 +1,18 @@
+{% extends 'app/staff/staff.html' %}
+{% block staff_content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>Create</button>
+</form>
+
+<div>
+    {% for category in categories %}
+    
+        <p>{{ category }}</p>
+        <a href="{% url 'edit_category' pk=category.id %}">Edit</a>
+        <a href="{% url 'delete_category' pk=category.id %}">Delete </a>
+    {% endfor %}
+</div>
+
+{% endblock %}
